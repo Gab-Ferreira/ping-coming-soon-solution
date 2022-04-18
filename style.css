@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin';
+    border: none;
+}
+
+:root{
+    --red: hsl(354, 100%, 66%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --blue: hsl(223, 87%, 63%);
+    --gray: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 4rem 0 0 0;
+}
+@media (max-width: 600px){
+    body{
+        padding: 4rem 1rem;
+    }
+}
+
+.landing-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+h1{
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 2.7em;
+}
+h1 > span{
+    font-weight: 700;
+}
+.landing-text > p{
+    font-size: 1.1em;
+}
+@media (max-width: 800px){
+    h1{
+        font-size: 2em;
+    }
+    .landing-text > p{
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 600px){
+    h1{
+        font-size: 1.7em;
+    }
+    .landing-text > p{
+        font-size: 0.8em;
+    }
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#email-input{
+    height: 3rem;
+    width: 30rem;
+    padding: 0 0 0 3rem;
+    border-radius: 30px;
+    border: solid var(--gray) 1px;
+    outline: none;
+    margin-right: 10px;
+    opacity: 0.7;
+}
+#submit-button{
+    height: 3rem;
+    width: 10rem;
+    border-radius: 40px;
+    color: white;
+    background-color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 10px 13px -7px, var(--blue), 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px var(--blue), 5px 5px 15px 5px rgba(0,0,0,0);
+}
+@media (max-width: 800px){
+    #email-input{
+        width: 20rem;
+        padding: 0 0 0 2rem;
+    }
+}
+@media (max-width: 600px){
+    form{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #email-input{
+        width: 18rem;
+    }
+    #submit-button{
+        margin-top: 1rem;
+        width: 18rem;
+    }
+}
+
+.banner-img > img{
+    margin-top: 3rem;
+    width: 40rem;
+    height: auto;
+}
+@media (max-width: 600px){
+    .banner-img > img{
+        width: 20rem;
+        margin-top: 4rem;
+    }
+}
+
+.social-media-icons{
+    display: flex;
+    flex-direction: row;
+    width: 20rem;
+    justify-content: center;
+}
+
+.icon-box{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid  rgb(214, 205, 205) 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+.icon-box:hover{
+    border: solid 1px var(--blue);
+    transition: 0.2s;
+}
+.facebook{
+    height: 100%;
+}
+
+@media (max-width: 600px){
+    .social-media-icons{
+        margin-top: 4rem;
+    }
+
+    .icon-box{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+footer > p{
+    margin-top: 1.5rem;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.attribution{
+    margin-top: 2rem;
+    font-size: 1.1em;
+    text-align: center;
+}
+.attribution > a{
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
+}
+.attribution > a:hover{
+    font-size: 1.15em;
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+@media (max-width: 600px){
+    footer > p{
+        font-size: 0.7em;
+    }
+    
+    .attribution{
+        font-size: 0.9em;
+    }
+}
+
+.error-style{
+    color: var(--red);
+    font-size: 0.8em;
+    margin: 0.5rem 0 0 2rem;
+}
+
